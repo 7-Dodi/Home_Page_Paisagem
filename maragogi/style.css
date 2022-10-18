@@ -1,0 +1,81 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#fundo{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(./maragogi.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+.cabeca{
+    width: 80%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+#logo{
+    height: 120px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+ul li{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+    cursor: pointer;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.active{
+    border-bottom: 4px solid #20b2aa;
+    padding-bottom: 10px;
+}
+#menu ul .li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #20b2aa;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: all .5s;
+}
+#menu ul .li:hover:after{
+    width: 100%;
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -850px 0;
+    animation: backcolor 5s linear infinite alternate;
+}
+@keyframes backcolor {
+    100%{
+        background-position: 0 0;
+    }
+    
+}
